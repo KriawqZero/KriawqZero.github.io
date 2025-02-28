@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcilio Ortiz - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #8B5CF6, #4F46E5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .project-card:hover, .skill-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .dark .gradient-bg {
+            background: linear-gradient(45deg, #1e1b4b, #0f172a);
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="bg-indigo-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Dark Mode Toggle -->
+    <button id="themeToggle" class="fixed top-4 right-4 p-2 rounded-full bg-indigo-100 dark:bg-gray-800 z-50">
+        <i class="bx bx-moon text-2xl text-indigo-600 dark:text-indigo-400"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Marcilio Ortiz</h1>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-16 text-center">
+        <div class="max-w-3xl mx-auto">
+            <div class="animate-float">
+                <div class="relative inline-block">
+                    <div class="absolute inset-0 bg-indigo-500/10 blur-3xl rounded-full"></div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 relative gradient-text">
+                        Desenvolvedor Full Stack
+                    </h1>
+                </div>
+            </div>
+            
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                Especialista em construir soluções escaláveis com 
+                <span class="font-bold text-indigo-600 dark:text-indigo-400">PHP/Laravel</span> e 
+                <span class="font-bold text-indigo-600 dark:text-indigo-400">Node/Vue.js</span>
+            </p>
+            
+            <div class="space-x-4">
+                <a href="#projects" class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition">
+                    Meus Projetos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">Projetos Destacados</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg">
+                <div class="h-48 bg-indigo-100 dark:bg-gray-700 rounded-xl mb-4"></div>
+                <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white">Sistema de E-commerce</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Plataforma completa com Laravel e Vue.js</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-indigo-100 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full text-sm">Laravel</span>
+                    <span class="px-3 py-1 bg-indigo-100 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full text-sm">Vue.js</span>
+                </div>
+                <div class="flex gap-3">
+                    <a href="#" class="flex-1 bg-indigo-600 text-white py-2 px-4 rounded-lg text-center hover:bg-indigo-700">
+                        Repositório
+                    </a>
+                    <a href="#" class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg text-center hover:bg-blue-700">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg">
+                <div class="h-48 bg-indigo-100 dark:bg-gray-700 rounded-xl mb-4"></div>
+                <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white">API de Pagamentos</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Sistema de gateway com Node.js e Express</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-indigo-100 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full text-sm">Node.js</span>
+                    <span class="px-3 py-1 bg-indigo-100 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full text-sm">MongoDB</span>
+                </div>
+                <div class="flex gap-3">
+                    <a href="#" class="flex-1 bg-indigo-600 text-white py-2 px-4 rounded-lg text-center hover:bg-indigo-700">
+                        Repositório
+                    </a>
+                    <a href="#" class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg text-center hover:bg-blue-700">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add more projects here -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">Habilidades Técnicas</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="skill-card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-gray-700 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                    <i class="bx bxl-php text-4xl text-indigo-600 dark:text-indigo-400"></i>
+                </div>
+                <h3 class="text-center font-semibold text-gray-800 dark:text-white">PHP/Laravel</h3>
+            </div>
+
+            <div class="skill-card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-gray-700 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                    <i class="bx bxl-nodejs text-4xl text-indigo-600 dark:text-indigo-400"></i>
+                </div>
+                <h3 class="text-center font-semibold text-gray-800 dark:text-white">Node.js/Express</h3>
+            </div>
+
+            <div class="skill-card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-gray-700 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                    <i class="bx bxl-vuejs text-4xl text-indigo-600 dark:text-indigo-400"></i>
+                </div>
+                <h3 class="text-center font-semibold text-gray-800 dark:text-white">Vue.js</h3>
+            </div>
+
+            <div class="skill-card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-gray-700 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                    <i class="bx bxs-data text-4xl text-indigo-600 dark:text-indigo-400"></i>
+                </div>
+                <h3 class="text-center font-semibold text-gray-800 dark:text-white">Bancos de Dados</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">Jornada Profissional</h2>
+        
+        <div class="relative max-w-3xl mx-auto">
+            <div class="absolute left-1/2 w-1 bg-indigo-100 dark:bg-gray-700 h-full"></div>
+            
+            <!-- Timeline Item 1 -->
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                <div class="order-1 w-5/12"></div>
+                <div class="order-1 w-5/12 px-4 py-4 bg-indigo-600 text-white rounded-lg shadow-lg">
+                    <h3 class="font-bold text-lg mb-2">Desenvolvedor Sênior</h3>
+                    <p class="text-sm opacity-90">Tech Solutions Inc. • 2022-Presente</p>
+                    <p class="text-sm mt-2">Liderança técnica de equipe em projetos Laravel/Vue.js</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="mb-8 flex justify-between items-center w-full left-timeline">
+                <div class="order-1 w-5/12 px-4 py-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                    <h3 class="font-bold text-lg mb-2">Full Stack Pleno</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Digital Innovations • 2020-2022</p>
+                    <p class="text-sm mt-2 text-gray-600 dark:text-gray-300">Desenvolvimento de sistemas Node.js + React</p>
+                </div>
+                <div class="order-1 w-5/12"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="gradient-bg py-16 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-8">Vamos trabalhar juntos?</h2>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="bg-white text-indigo-600 px-8 py-3 rounded-full hover:bg-gray-100 flex items-center">
+                    <i class="bx bxl-linkedin-square text-2xl mr-2"></i>
+                    LinkedIn
+                </a>
+                <a href="#" class="bg-white text-indigo-600 px-8 py-3 rounded-full hover:bg-gray-100 flex items-center">
+                    <i class="bx bxl-github text-2xl mr-2"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 mt-16 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600">
+                    <i class="bx bxl-github text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600">
+                    <i class="bx bxl-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600">
+                    <i class="bx bxl-medium-old text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">
+                © 2024 Marcilio Ortiz. Feito com ♥ e muita cafeína
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const moonIcon = '<i class="bx bx-moon text-2xl text-indigo-600 dark:text-indigo-400"></i>';
+        const sunIcon = '<i class="bx bx-sun text-2xl text-indigo-600 dark:text-indigo-400"></i>';
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            themeToggle.innerHTML = sunIcon;
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+            themeToggle.innerHTML = body.classList.contains('dark') ? sunIcon : moonIcon;
+        });
+
+        // Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach((section) => {
+            section.classList.add('transition-all', 'duration-500', 'ease-out', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
